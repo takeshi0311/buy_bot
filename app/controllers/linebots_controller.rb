@@ -37,7 +37,7 @@ class LinebotsController < ApplicationController
   end
 
   def search_and_create_message(input)
-    RakutenWebService.configure do |c|
+    RakutenWebService.configuration do |c|
       c.application_id = ENV['RAKUTEN_APPID']
       c.affiliate_id = ENV['RAKUTEN_AFID']
     end
